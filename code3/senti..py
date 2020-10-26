@@ -137,15 +137,15 @@ tokenized_tweet = data['tweet'].apply(lambda x: x.split())
 from gensim.models import  word2vec
 model_w2v = gensim.models.Word2Vec(tokenized_tweet, size = 200,window = 5, min_count = 2,sg = 1,hs =2, negative  = 10 , workers =4 , seed  = 34)
 model_w2v.train(tokenized_tweet,total_examples = len(data['tweet']),epochs = 20 )
-print(model_w2v)
+#print(model_w2v)
 
 #testing the dataset using the worf classification
 test_dine = model_w2v.wv.most_similar(positive= 'dinner')
-print(test_dine)
+#print(test_dine)
 test_milk = model_w2v.wv.most_similar(positive =  'milk')
-print(test_milk)
+#print(test_milk)
 test_hate = model_w2v.wv.most_similar(negative = "hate")
-print(test_hate)
+#print(test_hate)
 
 
 
