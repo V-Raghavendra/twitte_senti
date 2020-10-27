@@ -175,3 +175,5 @@ test_hate = model_w2v.wv.most_similar(negative = "hate")
 
 
 
+
+
