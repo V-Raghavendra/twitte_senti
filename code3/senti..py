@@ -141,11 +141,11 @@ model_w2v.train(tokenized_tweet,total_examples = len(data['tweet']),epochs = 20 
 
 #testing the dataset using the worf classification
 test_dine = model_w2v.wv.most_similar(positive= 'dinner')
-#print(test_dine)
+print(test_dine)
 test_milk = model_w2v.wv.most_similar(positive =  'milk')
-#print(test_milk)
+print(test_milk)
 test_hate = model_w2v.wv.most_similar(negative = "hate")
-#print(test_hate)
+print(test_hate)
 
 
 
